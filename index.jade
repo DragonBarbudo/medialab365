@@ -1,0 +1,101 @@
+//-output: index.html, pretty:false
+
+include site/_config.jade
+
++html5
+  +head(title, stylesheets, keywords, description)
+  body    
+
+    
+    +sliderbg('#inicio', 'site/img/bg_home.jpg')
+    #inicio
+      #topbar
+        .container
+          .col3.col-t12.col-m12.tc
+            a(href="#inicio", data-scroll): img(src="site/img/medialab365_white.png", alt="#{title}") 
+          .col9.col-t12.col-m12
+            nav: +menu('index', menu, 'horizontal', '#', ' ', '', {'data-scroll':true})
+      .container
+        .col6.col-t12.col-m12.tc
+          img(src="site/img/medialab365_M.png", alt="#{title}").imago.breath
+          h1 Marketing digital y social media para tu PYME
+          ul.list
+            li: i.fa.fa-check
+              span Branding
+            li: i.fa.fa-check
+              span Marketing digital
+            li: i.fa.fa-check
+              span Community manager
+            li: i.fa.fa-check
+              span Campañas SEM y SEO
+            li: i.fa.fa-check
+              span Desarrollo de sitios web
+    
+    +sliderbg('#conocenos', 'site/img/bg_us.jpg')
+    #conocenos
+      .barra: h2 Somos un equipo de marketing digital
+      .container
+        .col8.col-m12.tc
+          img(src="site/img/medialab365_T.png", alt="#{title}")
+          p <strong>Creamos tu página web</strong> para que puedas tener un sitio en internet donde te pueden visitar y puedas promocionar tu producto o servicio. <strong>Posicionamos tu marca</strong> haciendo campañas en los principaes buscadores y <strong>creamos la mejor estrategia de marketing para tu empresa</strong>. 
+          h3 ¡Aprovecha la comunidad virtual!
+          p Conoce nuestro servicio de <strong>Community Manager</strong> para usar las redes sociales a favor de tu empresa. 
+        .col4.col-m12.tc
+          img(src="site/img/lab.png", alt="#{title}").lab.floating
+    +sliderbg('#servicios', 'site/img/bg_services.jpg')
+    #servicios
+      .barra.color: h2 Servicios para tu empresa
+      .container
+        .col6.col-m12
+          h3 Branding
+          p Detectamos las necesidades de tu empresa y diseñamos una estrategia de marketing digital para impulsar tu marca.
+          p Posicionamos en internet tu producto o servicio y le damos personalidad a tu marca de acuerdo con tus objetivos y los clientes a los cuáles quieres llegar.
+        .col6.col-m12
+          h3 Community manager
+          p Lanzamos tu producto o servicio en las redes sociales para que conozcan más de tu empresa y puedas tener contacto con la comunidad virtual.
+          p Usa Facebook, Twitter, Instagram ..... a tu favor y haz que millones de usuaros de internet se pongan en contacto contigo por medio de las redes!! 
+      .container
+        .col6.col-m12
+          h3 Campañas SEM y SEO
+          p Te ayudamos a realizar campañas para publicitar tu producto o servicio en los prinicpales buscadores de la web. Para ello planificamos la mejor estrategia de publicidad para que la inversión la puedas ver reflejada en registros de calidad. 
+          p Para que las visitas a tu sitio puedan convertirse en ventas potenciales, creamos tu landing page para que la página de destino pueda captar registros de calidad y generarte una base de datos valiosa. 
+        .col6.col-m12
+          h3 Desarrollo de sitios web
+          p Creamos tu sitio web y lo diseñamos de acuerdo a la personalidad de tu empresa para que tu poducto o servicio pueda ser conocido de forma accesible y sencilla desde cualquier tipo de dispositivo.
+          p Ofrecemos diseños para todo tipo de empresa, diseños innovaores, de calidad y con la garantía der ser funcionales. 
+    #trabajo
+      .barra: h2 Nuestro trabajo
+      .container
+        .col4.col-t6.col-m10.push-m1: img(src="site/img/trabajo_1.png", alt="Sitio Web Responsables X México", data-sr="enter top").w100
+        .col4.col-t6.col-m10.push-m1: img(src="site/img/trabajo_2.png", alt="Sitio Web Directopress", data-sr="enter bottom").w100
+        .col4.col-t6.col-m10.push-m1: img(src="site/img/trabajo_3.png", alt="Sitio Web Qristalum", data-sr="enter top").w100
+        .col4.col-t6.col-m10.push-m1: img(src="site/img/trabajo_4.png", alt="Sitio Web Comercializadora Renion", data-sr="enter left").w100 
+        .col4.col-t6.col-m10.push-m1: img(src="site/img/trabajo_5.png", alt="Sitio Web Módulo Idea", data-sr="enter bottom").w100
+        .col4.col-t6.col-m10.push-m1: img(src="site/img/trabajo_6.png", alt="Sitio Web Xpresion 316", data-sr="enter right").w100
+    
+    +sliderbg('#contacto', 'site/img/bg_contacto.jpg')
+    #contacto
+      .barra.color: h2 ¡Ponte en contacto!
+      .tc
+        img(src="site/img/medialab365_M.png", alt="#{title}").mfooter
+      .container
+        .col7.col-t12.col-m12
+          .container
+            .col3: &nbsp;
+            .col9.col-t12.col-m12
+              h3 Escríbenos
+              p A través de   
+                a(href="mailto:contacto@medialab365.com") contacto@medialab365.com
+                |  o llámanos al teléfono <strong>55 55 - 55 55</strong>.
+              p También puedes contactarnos mediante el formulario de la derecha.
+        .col5.col-t12.col-m12
+          +formSimple('contacto@medialab365.com', 'contacto@medialab365.com', 'Mensaje en MediaLab365')
+      .container
+        .col5.push1.col-t6.push-t0.col-m10.push-m1: img(src="site/img/laboratory.png", alt="#{title}").w100.labo
+
+    footer
+      .barra: .container
+          .col3.col-t12.tc.col-m12: a(href="#inicio", data-scroll): img(src="site/img/medialab365_white.png", alt="#{title}")
+
+          .col9.col-t12.col-m12: nav: +menu('index', menu, 'horizontal', '#', ' ', '', {'data-scroll':true})
+    +scripts

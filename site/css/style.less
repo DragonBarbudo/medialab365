@@ -1,0 +1,272 @@
+//-out: style.css
+@import '../../dw/dw.less';
+@import '../../dw/docs.less';
+
+/* ################################ CONTAINER WIDTHS: */
+@containerWidth: 960px;
+@containerWidthTablet: 480px;
+/* ################################ COLORS */
+@b: #222;
+@w: #f5f5f5;
+@g: #888;
+@main: #22D3C7;
+@sec: #FF7400;
+@dark: #02505F;
+/* ################################ FONTS */
+.font{ font-family: 'Arvo', serif; }
+.font2{font-family: 'Patua One', cursive;}
+/* ################################ CLASSES */
+.btn{
+  font-size: 16px;
+  display: inline-block;
+  background: @main;
+  color:@w;
+  border: none;
+  padding: 8px 15px;
+  text-decoration: none;
+  .fa{ color:@w/2; margin-right:5px; margin-left: 5px;}
+  .box-sizing(border-box);
+  &:hover{
+    background: @sec;
+    color:@w;
+    .breath;
+    cursor: pointer;
+  }
+  &.small{
+    padding: 0 4px;
+  }
+  &.vbottom{
+    vertical-align: bottom;
+  }
+}
+
+.tc{text-align: center;}
+
+/* ################################ GENERAL */
+body{
+  .font;
+  color:@dark;
+}
+
+#inicio{
+  #topbar{
+    background: @main;
+    padding: 5px 0;
+    nav{
+      ul{
+        li{
+          a{
+            text-align: center;
+            padding: 10px 0;
+            font-size: 1em;
+            color:@w;
+            @media @tablet{font-size: 0.8em;}
+            &:hover{
+              color:@dark;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .imago{
+    margin: 30px 0;
+  }
+  h1{
+    font-weight: normal;
+    .font2;
+    font-size: 2em;
+    padding: 20px 0;
+  }
+  ul.list{
+
+    margin: 20px 100px 140px 100px;
+    @media @mobile{
+      margin: 20px 20px 80px 50px;
+    }
+    list-style: none;
+    text-align: left;
+    li{
+
+      margin: 10px 0;
+      font-size: 1.2em;
+      i{
+        color:@main;
+      }
+      span{
+        display: inline-block;
+        margin-left: 10px;
+        .font2;
+        color:@sec;
+      }
+    }
+  }
+}
+
+
+#conocenos{
+  p{margin: 40px 0;}
+  h3{
+    margin: 40px 0;
+    font-size: 1.5em;
+  }
+  img{
+    margin: 30px 0;
+    &.lab{
+      margin-top: 80px;
+    }
+  }
+  padding-bottom: 100px;
+}
+
+#servicios{
+  padding-bottom: 60px;
+  h3{
+    .font2;
+    margin: 20px 0;
+    color:@sec;
+    font-size: 1.6em;
+    font-weight: normal;
+  }
+  p{
+    margin: 20px 0;
+  }
+}
+
+
+#trabajo{
+  img{
+    margin: 10px 0;
+  }
+  padding-bottom: 60px;
+}
+
+
+#contacto{
+  .barra{
+    margin-bottom: 40px;
+  }
+  h3{
+    .font2;
+    color:@sec;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+  p{
+    margin-bottom: 30px;
+    color:@dark;
+  }
+  form{
+    margin-top: 25px;
+    padding-bottom: 60px;
+    label{
+      margin-bottom: 5px;
+      font-size: 0.9em;
+    }
+    input, textarea{
+      border:none;
+      background: transparent;
+      color:@dark;
+      .font;
+      .box-sizing(border-box);
+      padding: 5px;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+      border-bottom: 2px solid @sec;
+    }
+    button{
+      width: 100%;
+      .font;
+    }
+  }
+  .resultado{
+    color:@sec;
+    text-align: center;
+  }
+  .mfooter{
+    width: 120px;
+    margin: 40px auto 60px auto;
+  }
+  a{
+    color:@sec;
+    text-decoration: none;
+    .font2;
+    &:hover{color:@dark;}
+  }
+  strong{
+    .font2;
+  }
+  .labo{
+    margin-top: 100px;
+    @media @tablet{margin-top: 40px;}
+  }
+}
+
+
+.barra{
+  background: @sec;
+  color:@w;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0;
+  border-top: 2px solid @main;
+  border-bottom: 4px solid @dark;
+  position: relative;
+  margin-bottom: 60px;
+  h2{
+    .font;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  &:after{
+    content:"";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 26px 26px 0 26px;
+    border-color: @sec transparent transparent transparent;
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    margin-left: -26px;
+  }
+  &.color{
+    background: @main;
+    border-top: 2px solid @sec;
+    &:after{
+    border-color: @main transparent transparent transparent;
+    }
+  }
+
+}
+
+
+footer{
+  .barra{
+    margin-bottom: 0;
+    font-size: 0.8em;
+    padding: 20px 0;
+    nav{
+      margin-top: 14px;
+      a{
+        color:@w;
+        &:hover{
+          color:@dark;
+        }
+      }
+    }
+    &:after{
+      display: none;
+
+    }
+  }
+
+}
+
+
+@media @tablet, @mobile{
+  .backstretch img{ left: 0 !important;}
+}
